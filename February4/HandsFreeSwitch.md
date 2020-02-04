@@ -8,6 +8,6 @@ I connected my ground (black wire) to the 1st row, and my red wire to the 2nd ro
 
 These yellow and white wires are taped to a piece of cardboard on the side of the baseboard, so they are standing vertically, with about an inch between them that my tongue can fit between. By placing my tongue (making sure it touches both wires) I can turn on the light, hands-free.
 
-**Here is my image**
+**Here are my images**
 ![](IMG_7789.JPG)
 ![](IMG_7790.JPG)
