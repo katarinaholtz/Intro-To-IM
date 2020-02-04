@@ -1,6 +1,6 @@
 **Here is the description of my hands free switch**
 
-Switch Name: Look Ma, No Hands!
+*Switch Name: Look Ma, No Hands!*
 
 This switch is inspired by the fact that one of the things I associated most with currents as a child was to be careful of electricity around water. So I decided to use my own tongue to turn on this LED light. Of course, I made sure that the power source is low - since it is connected via USB from my laptop, the voltage should be set at around 5 volts. I know the common gag of licking a 9V battery for a minor electric shock, so this seemed safe as well. (I was also well-assured by the person helping me make this switch that I would survive.)
 
