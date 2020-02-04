@@ -15,3 +15,6 @@ These yellow and white wires are taped to a piece of cardboard on the side of th
 
 ![](IMG_7789.JPG)
 ![](IMG_7790.JPG)
+
+
+**![Here](https://www.youtube.com/watch?v=IGv6j22sM6E&feature=youtu.be) is a video that shows my project**
