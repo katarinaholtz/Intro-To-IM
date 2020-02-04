@@ -7,3 +7,7 @@ This switch is inspired by the fact that one of the things I associated most wit
 I connected my ground (black wire) to the 1st row, and my red wire to the 2nd row. I left a gap using the LED itself, placing the negative end in the 1st row and the positive end in the 3rd row. A 330 resistor connects the power to the 2nd row, where I put in a new wire (yellow) to use for the switch. A white wire is in the 3rd row and operates as the other part of the switch.
 
 These yellow and white wires are taped to a piece of cardboard on the side of the baseboard, so they are standing vertically, with about an inch between them that my tongue can fit between. By placing my tongue (making sure it touches both wires) I can turn on the light, hands-free.
+
+**Here is my image**
+![](IMG_7789.JPG)
+![](IMG_7790.JPG)
