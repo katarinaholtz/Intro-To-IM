@@ -8,3 +8,5 @@ Making sure that the blue/yellow light would also turn off when they were both p
 
 
 **My schematic for the project**
+<img src="IMG_8028.jpg"> 
+
