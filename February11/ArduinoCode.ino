@@ -1,3 +1,4 @@
+
 // Naming the pins:
 int yellowButton = 2;
 int blueButton = 3;
@@ -14,7 +15,7 @@ void setup() {
   // Making the button pins inputs and LEDs an output:
   pinMode(yellowButton, INPUT);
   pinMode(blueButton, INPUT);
-  
+
   pinMode(yellowLED, OUTPUT);
   pinMode(blueLED, OUTPUT);
   pinMode(greenLED, OUTPUT);
@@ -28,31 +29,31 @@ void loop() {
   int yellowButtonState = digitalRead(yellowButton);
   int blueButtonState = digitalRead(blueButton);
 
-    // Both buttons are pressed:
-    if (yellowButtonState == 1 && blueButtonState == 1) {
-      digitalWrite(greenLED, 1);
-      digitalWrite(yellowLED, 0);
-      digitalWrite(blueLED, 0);
-    }
+  // Both buttons are pressed:
+  if (yellowButtonState == 1 && blueButtonState == 1) {
+    digitalWrite(greenLED, 1);
+    digitalWrite(yellowLED, 0);
+    digitalWrite(blueLED, 0);
+  }
 
-    // Yellow button is pressed:
-    else if (yellowButtonState == 1) { 
-      digitalWrite(yellowLED, yellowButtonState);
-      digitalWrite(greenLED, !yellowButtonState);
-      digitalWrite(blueLED, !yellowButtonState);
-    } 
+  // Yellow button is pressed:
+  else if (yellowButtonState == 1) {
+    digitalWrite(yellowLED, yellowButtonState);
+    digitalWrite(greenLED, !yellowButtonState);
+    digitalWrite(blueLED, !yellowButtonState);
+  }
 
-    // Blue button is pressed:
-    else if (blueButtonState == 1) {
-      digitalWrite(blueLED, blueButtonState);
-      digitalWrite(greenLED, !blueButtonState);
-      digitalWrite(yellowLED, !blueButtonState);
-    } 
+  // Blue button is pressed:
+  else if (blueButtonState == 1) {
+    digitalWrite(blueLED, blueButtonState);
+    digitalWrite(greenLED, !blueButtonState);
+    digitalWrite(yellowLED, !blueButtonState);
+  }
 
-    // No button is pressed:
-    else {
-      digitalWrite(yellowLED, LOW);
-      digitalWrite(blueLED, LOW);
-      digitalWrite(greenLED, LOW);
-    }
+  // No button is pressed:
+  else {
+    digitalWrite(yellowLED, LOW);
+    digitalWrite(blueLED, LOW);
+    digitalWrite(greenLED, LOW);
+  }
 }
