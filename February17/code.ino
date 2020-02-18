@@ -2,7 +2,9 @@
   and class example by Michael Shiloh on 13 February 2020
 
   GOAL: Turn on all the lights
-  Start
+  1. Start by using the light sensor, which will tell you which button(s) to press in order to turn on more light(s).
+  2. Turn the potentiometer on to turn on more light(s)
+  3. Figure out how to turn on all light(s) now!
 */
 
 const int redButton = 13;
