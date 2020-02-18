@@ -13,4 +13,4 @@ Once the lights are (dimly) on, they will prompt the user to press the red and b
 
 For the fourth (green) LED, I wanted to use a sliding switch at first, but it never worked. It stayed on HIGH at all times, making it impossible to use it to control the last, green LED. Hopefully I can figure this out later. I switched to the potentiometer. Another glitch was that it kept blinking when turned on by the potentiometer, which we believe was caused by the // Green button is pressed action turning off all the lights, so it looped on and off. Removing it, however, left the green LED on all times, so I kept the blinking on as an added feature so that all lights had to be bright constantly.
 
-![](schematic.png)
+![](schematic.jpg)
