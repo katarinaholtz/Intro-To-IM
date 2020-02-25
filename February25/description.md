@@ -10,7 +10,11 @@ I checked the speaker against an example code, so I know the speaker works, but 
 
 I genuinely have no idea what is happening, I've gotten help from people but it doesn't make sense to me. I know there is something wrong with my If statement, but even then the music I WANT should be playing in this sporadic manner that the melody code does. 
 
-
+**Here are pictures of my circuit**
+![](instrument2.JPG)
+![](instrument1.JPG)
+![](instrument3.JPG)
+![](schematicInstrument.JPG)
 
 
 
