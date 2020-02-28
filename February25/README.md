@@ -18,3 +18,6 @@ I genuinely have no idea what is happening, I've gotten help from people but it 
 
 
 
+**UPDATE**
+The button wasn't working because the circuit had not been properly built (the input was going nowhere). Then, the melody had likely been off because the for loop, where it says 'thisNote < X number' has to be the same as the number of notes, since it starts counting at 0. Because we had 17 instead of  16, the code wouldn't run past that point. There was also at one point an issue with a duration of 0, which also broke the code since 1000/0 for the duration makes it infinity.
+
