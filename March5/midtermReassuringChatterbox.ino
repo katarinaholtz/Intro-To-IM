@@ -20,7 +20,7 @@
   Set-up below:
 */
 
-// Initialize the library by associating any needed LCD interface pin with the arduino pin number it is connected to
+// Initialize library by associating needed LCD interface pin with the arduino pin number it's connected to
 const int rs = 13, en = 12, d4 = 11, d5 = 10, d6 = 9, d7 = 8;
 LiquidCrystal lcd(rs, en, d4, d5, d6, d7);
 
@@ -137,7 +137,8 @@ void loop() {
 
 
   // Print first message "How are you on a scale of 1-10?" on LCD
-  if (anxiousMappedValue >= 2 && pensiveMappedValue >= 2 && boredMappedValue >= 2 && confusedMappedValue >= 2 && lonelyMappedValue >= 2 && overwhelmedMappedValue >= 2) {
+  if (anxiousMappedValue >= 2 && pensiveMappedValue >= 2 && boredMappedValue >= 2
+  && confusedMappedValue >= 2 && lonelyMappedValue >= 2 && overwhelmedMappedValue >= 2) {
 
     // Set up the LCD's number of columns and rows:
     lcd.begin(20, 2);
