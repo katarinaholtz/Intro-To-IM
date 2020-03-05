@@ -1,4 +1,4 @@
-** REASSURING MESSAGE CHATTER BOX **
+**REASSURING MESSAGE CHATTER BOX**
 
 March is Mental Health Awareness Month! Life can get tough sometimes and we could use a reassuring message or good thought to keep us going. 
 
