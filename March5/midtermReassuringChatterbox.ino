@@ -20,6 +20,11 @@
   Set-up below:
 */
 
+
+// Include the library codes:
+#include <LiquidCrystal.h>
+#include "pitches.h"
+
 // Initialize library by associating needed LCD interface pin with the arduino pin number it's connected to
 const int rs = 13, en = 12, d4 = 11, d5 = 10, d6 = 9, d7 = 8;
 LiquidCrystal lcd(rs, en, d4, d5, d6, d7);
@@ -33,10 +38,6 @@ const int lonelySensor = A1;
 const int overwhelmedSensor = A0;
 
 const int speaker = 6;
-
-// Include the library codes:
-#include <LiquidCrystal.h>
-#include "pitches.h"
 
 // Notes in the melody that will play when reassuring message is displayed:
 int melody[] = {
@@ -70,10 +71,10 @@ void setup() {
 
 void loop() {
   // Read the anxiousSensor force sensor
-  int anxiousSensorValue = analogRead(anxiousSensor);               //Displayed between 852 (touch) and 1023 (no touch)
+  int anxiousSensorValue = analogRead(anxiousSensor);               //Displayed between 930 (touch) and 837 (no touch)
   //Map the value:
   int anxiousMappedValue;
-  anxiousMappedValue = map(anxiousSensorValue, 853, 1020, 0, 255);
+  anxiousMappedValue = map(anxiousSensorValue, 934, 837, 0, 255);  // (Touch, No Touch) A mapped value less than 2 will prompt message
   Serial.print("anxious raw value = ");
   Serial.print(anxiousSensorValue);
   Serial.print(" mapped value = ");
@@ -81,10 +82,10 @@ void loop() {
   //delay(5000);                                                    //Commented out to save time, use when reading Serial Monitor
 
   // Read the pensiveSensor force sensor
-  int pensiveSensorValue = analogRead(pensiveSensor);                //Displayed between 864 (touch) and 1023 (no touch)
+  int pensiveSensorValue = analogRead(pensiveSensor);                //Displayed between 966 (touch) and 839 (no touch)
   //Map the value:
   int pensiveMappedValue;
-  pensiveMappedValue = map(pensiveSensorValue, 864, 1020, 0, 255);
+  pensiveMappedValue = map(pensiveSensorValue, 966, 839, 0, 255);   // (Touch, No Touch) A mapped value less than 2 will prompt message
   Serial.print("pensive raw value = ");
   Serial.print(pensiveSensorValue);
   Serial.print(" mapped value = ");
@@ -92,10 +93,10 @@ void loop() {
   //delay(5000);                                                    //Commented out to save time, use when reading Serial Monitor
 
   // Read the boredSensor force sensor
-  int boredSensorValue = analogRead(boredSensor);                   //Displayed between 238 (touch) and 1023 (no touch)
+  int boredSensorValue = analogRead(boredSensor);                   //Displayed between 3 (touch) and 3 (no touch) BUT NOT WORKING PROPERLY
   //Map the value:
   int boredMappedValue;
-  boredMappedValue = map(boredSensorValue, 238, 1023, 0, 255);
+  boredMappedValue = map(boredSensorValue, 350, 964, 0, 255);
   Serial.print("bored raw value = ");
   Serial.print(boredSensorValue);
   Serial.print(" mapped value = ");
@@ -103,10 +104,10 @@ void loop() {
   //delay(5000);                                                    //Commented out to save time, use when reading Serial Monitor
 
   // Read the confusedSensor force sensor
-  int confusedSensorValue = analogRead(confusedSensor);              //Displayed between 0 (touch) and 804 (no touch) BUT NOT WORKING PROPERLY
+  int confusedSensorValue = analogRead(confusedSensor);              //Displayed between 945 (touch) and 0 (no touch)
   //Map the value:
   int confusedMappedValue;
-  confusedMappedValue = map(confusedSensorValue, 0, 804, 0, 255);
+  confusedMappedValue = map(confusedSensorValue, 945, 0, 0, 255);
   Serial.print("confused raw value = ");
   Serial.print(confusedSensorValue);
   Serial.print(" mapped value = ");
@@ -114,10 +115,10 @@ void loop() {
   //delay(5000);                                                    //Commented out to save time, use when reading Serial Monitor
 
   // Read the lonelySensor force sensor
-  int lonelySensorValue = analogRead(lonelySensor);                   //Displayed between 0 (touch) and 500 (no touch) BUT NOT WORKING PROPERLY
+  int lonelySensorValue = analogRead(lonelySensor);                   //Displayed between 932 (touch) and 0 (no touch)
   //Map the value:
   int lonelyMappedValue;
-  lonelyMappedValue = map(lonelySensorValue, 0, 500, 0, 255);
+  lonelyMappedValue = map(lonelySensorValue, 932, 0, 0, 255);
   Serial.print("lonely raw value = ");
   Serial.print(lonelySensorValue);
   Serial.print(" mapped value = ");
@@ -125,10 +126,10 @@ void loop() {
   //delay(5000);                                                    //Commented out to save time, use when reading Serial Monitor
 
   // Read the overwhelmedSensor force sensor
-  int overwhelmedSensorValue = analogRead(overwhelmedSensor);          //Displayed between 0 (touch) and 706 (no touch) BUT NOT WORKING PROPERLY
+  int overwhelmedSensorValue = analogRead(overwhelmedSensor);          //Displayed between 902 (touch) and 0 (no touch)
   //Map the value:
   int overwhelmedMappedValue;
-  overwhelmedMappedValue = map(overwhelmedSensorValue, 0, 706, 0, 255);
+  overwhelmedMappedValue = map(overwhelmedSensorValue, 902, 0, 0, 255);
   Serial.print("overwhelmed raw value = ");
   Serial.print(overwhelmedSensorValue);
   Serial.print(" mapped value = ");
@@ -137,8 +138,8 @@ void loop() {
 
 
   // Print first message "How are you on a scale of 1-10?" on LCD
-  if (anxiousMappedValue >= 2 && pensiveMappedValue >= 2 && boredMappedValue >= 2
-  && confusedMappedValue >= 2 && lonelyMappedValue >= 2 && overwhelmedMappedValue >= 2) {
+  if (anxiousMappedValue >= 2 && pensiveMappedValue >= 2 /* && boredMappedValue >= 2 */         // Commented out because bored sensor isn't working
+      && confusedMappedValue >= 2 && lonelyMappedValue >= 2 && overwhelmedMappedValue >= 2) {
 
     // Set up the LCD's number of columns and rows:
     lcd.begin(20, 2);
@@ -206,33 +207,33 @@ void loop() {
       noTone(speaker);
     }
 
-  } // Print bored response message and play sound
-  else if (boredMappedValue <= 2) {
-    // Set up the LCD's number of columns and rows:
+    /*} // Print bored response message and play sound                    // Commented out because the bored sensor does not seem to be working
+      else if (boredMappedValue <= 2) {                                     // It only reads at around raw value of 3, regardless of touch
+      // Set up the LCD's number of columns and rows:
+      lcd.begin(16, 2);
+      // Print a message to the LCD.
+      lcd.print("Google dad jokes");
+
+      // Iterate over the notes of the melody:
+      for (int thisNote = 0; thisNote < 3; thisNote++) {
+
+        // to calculate the note duration, take one second divided by the note type.
+        //e.g. quarter note = 1000 / 4, eighth note = 1000/8, etc.
+        int noteDuration = 1000 / noteDurations[thisNote];
+        tone(speaker, melody[thisNote], noteDuration);
+
+        // to distinguish the notes, set a minimum time between them.
+        // the note's duration + 30% seems to work well:
+        int pauseBetweenNotes = noteDuration * 1.30;
+        delay(pauseBetweenNotes);
+        // stop the tone playing:
+        noTone(speaker);
+      } */
+
+  } // Print confused response message and play sound
+  else if (confusedMappedValue <= 2) {
+    // set up the LCD's number of columns and rows:
     lcd.begin(16, 2);
-    // Print a message to the LCD.
-    lcd.print("Google dad jokes");
-
-    // Iterate over the notes of the melody:
-    for (int thisNote = 0; thisNote < 3; thisNote++) {
-
-      // to calculate the note duration, take one second divided by the note type.
-      //e.g. quarter note = 1000 / 4, eighth note = 1000/8, etc.
-      int noteDuration = 1000 / noteDurations[thisNote];
-      tone(speaker, melody[thisNote], noteDuration);
-
-      // to distinguish the notes, set a minimum time between them.
-      // the note's duration + 30% seems to work well:
-      int pauseBetweenNotes = noteDuration * 1.30;
-      delay(pauseBetweenNotes);
-      // stop the tone playing:
-      noTone(speaker);
-    }
-
-  } /* // Print confused response message and play sound
-  else if (confusedMappedValue <= 2) {                        // Commented out because the force sensors are not working properly
-    // set up the LCD's number of columns and rows:           // giving seemingly random readings regardless of getting touched
-    lcd.begin(16, 2);                                         // or not, and so flashing its message which ruins the project.
     // Print a message to the LCD.
     lcd.print("Give it time.");
 
@@ -250,7 +251,7 @@ void loop() {
       delay(pauseBetweenNotes);
       // stop the tone playing:
       noTone(speaker);
-
+    }
   } // Print lonely response message and play sound
   else if (lonelyMappedValue <= 2) {
     // set up the LCD's number of columns and rows:
@@ -272,7 +273,7 @@ void loop() {
       delay(pauseBetweenNotes);
       // stop the tone playing:
       noTone(speaker);
-
+    }
   }  // Print overwhelmed response message and play sound
   else if (overwhelmedMappedValue <= 2) {
     // set up the LCD's number of columns and rows:
@@ -294,6 +295,8 @@ void loop() {
       delay(pauseBetweenNotes);
       // stop the tone playing:
       noTone(speaker);
+    }
+
   }
-*/
+
 }
