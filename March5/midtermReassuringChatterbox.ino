@@ -149,7 +149,7 @@ void loop() {
     // (note: line 1 is the second row, since counting begins with 0):
     lcd.setCursor(0, 1);
     //Print a message to second line of LCD
-    lcd.print("a scale of 1-10?");
+    lcd.print("a scale of 1-8?");
 
   } // Print anxious response message and play sound
   else if (anxiousMappedValue <= 2) {
