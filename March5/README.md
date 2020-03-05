@@ -8,9 +8,14 @@ The *Reassuring Message Chatter Box* is a spin on the traditional fortune teller
 
 
 **Photos of the project**
+![](instrument2.JPG)
+![](instrument1.JPG)
+![](instrument3.JPG)
+![](schematicInstrument.JPG)
 
 
-**Here is a link to my video, somewhat working.**
+**[Here](https://youtu.be/8g22FEsRuYo) is a video that shows my project**
+*The 'bored' sensor was still not properly mapped, which is why the melody appears.*
 
 
 **Problems and possible solutions**
