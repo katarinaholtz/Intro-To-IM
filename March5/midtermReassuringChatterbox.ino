@@ -93,10 +93,10 @@ void loop() {
   //delay(5000);                                                    //Commented out to save time, use when reading Serial Monitor
 
   // Read the boredSensor force sensor
-  int boredSensorValue = analogRead(boredSensor);                   //Displayed between 3 (touch) and 3 (no touch) BUT NOT WORKING PROPERLY
+  int boredSensorValue = analogRead(boredSensor);                   //Displayed between 865 (touch) and 0 (no touch)
   //Map the value:
   int boredMappedValue;
-  boredMappedValue = map(boredSensorValue, 350, 964, 0, 255);
+  boredMappedValue = map(boredSensorValue, 750, 0, 0, 255);         // (Touch, No Touch) A mapped value less than 2 will prompt message
   Serial.print("bored raw value = ");
   Serial.print(boredSensorValue);
   Serial.print(" mapped value = ");
@@ -107,7 +107,7 @@ void loop() {
   int confusedSensorValue = analogRead(confusedSensor);              //Displayed between 945 (touch) and 0 (no touch)
   //Map the value:
   int confusedMappedValue;
-  confusedMappedValue = map(confusedSensorValue, 945, 0, 0, 255);
+  confusedMappedValue = map(confusedSensorValue, 945, 0, 0, 255);    // (Touch, No Touch) A mapped value less than 2 will prompt message
   Serial.print("confused raw value = ");
   Serial.print(confusedSensorValue);
   Serial.print(" mapped value = ");
@@ -129,7 +129,7 @@ void loop() {
   int overwhelmedSensorValue = analogRead(overwhelmedSensor);          //Displayed between 902 (touch) and 0 (no touch)
   //Map the value:
   int overwhelmedMappedValue;
-  overwhelmedMappedValue = map(overwhelmedSensorValue, 902, 0, 0, 255);
+  overwhelmedMappedValue = map(overwhelmedSensorValue, 902, 0, 0, 255);   // (Touch, No Touch) A mapped value less than 2 will prompt message
   Serial.print("overwhelmed raw value = ");
   Serial.print(overwhelmedSensorValue);
   Serial.print(" mapped value = ");
@@ -138,7 +138,7 @@ void loop() {
 
 
   // Print first message "How are you on a scale of 1-10?" on LCD
-  if (anxiousMappedValue >= 2 && pensiveMappedValue >= 2 /* && boredMappedValue >= 2 */         // Commented out because bored sensor isn't working
+  if (anxiousMappedValue >= 2 && pensiveMappedValue >= 2  && boredMappedValue >= 2
       && confusedMappedValue >= 2 && lonelyMappedValue >= 2 && overwhelmedMappedValue >= 2) {
 
     // Set up the LCD's number of columns and rows:
@@ -207,28 +207,28 @@ void loop() {
       noTone(speaker);
     }
 
-    /*} // Print bored response message and play sound                    // Commented out because the bored sensor does not seem to be working
-      else if (boredMappedValue <= 2) {                                     // It only reads at around raw value of 3, regardless of touch
-      // Set up the LCD's number of columns and rows:
-      lcd.begin(16, 2);
-      // Print a message to the LCD.
-      lcd.print("Google dad jokes");
+  } // Print bored response message and play sound                    // Comment out if the bored sensor does not seem to be working
+  else if (boredMappedValue <= 2) {                                     // For example: it only reads at around raw value of 3, regardless of touch
+    // Set up the LCD's number of columns and rows:
+    lcd.begin(16, 2);
+    // Print a message to the LCD.
+    lcd.print("Google dad jokes");
 
-      // Iterate over the notes of the melody:
-      for (int thisNote = 0; thisNote < 3; thisNote++) {
+    // Iterate over the notes of the melody:
+    for (int thisNote = 0; thisNote < 3; thisNote++) {
 
-        // to calculate the note duration, take one second divided by the note type.
-        //e.g. quarter note = 1000 / 4, eighth note = 1000/8, etc.
-        int noteDuration = 1000 / noteDurations[thisNote];
-        tone(speaker, melody[thisNote], noteDuration);
+      // to calculate the note duration, take one second divided by the note type.
+      //e.g. quarter note = 1000 / 4, eighth note = 1000/8, etc.
+      int noteDuration = 1000 / noteDurations[thisNote];
+      tone(speaker, melody[thisNote], noteDuration);
 
-        // to distinguish the notes, set a minimum time between them.
-        // the note's duration + 30% seems to work well:
-        int pauseBetweenNotes = noteDuration * 1.30;
-        delay(pauseBetweenNotes);
-        // stop the tone playing:
-        noTone(speaker);
-      } */
+      // to distinguish the notes, set a minimum time between them.
+      // the note's duration + 30% seems to work well:
+      int pauseBetweenNotes = noteDuration * 1.30;
+      delay(pauseBetweenNotes);
+      // stop the tone playing:
+      noTone(speaker);
+    }
 
   } // Print confused response message and play sound
   else if (confusedMappedValue <= 2) {
