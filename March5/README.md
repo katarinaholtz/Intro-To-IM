@@ -6,7 +6,7 @@ The *Reassuring Message Chatter Box* is a spin on the traditional fortune teller
 
 **Circuit schematic and code**
 
-<img src="midtermSchematic.jpg" alt="schematic" width="640" height="480">
+![](midtermSchematic.jpg)
 
 **Photos of the project**
 ![](midterm6.JPG)
