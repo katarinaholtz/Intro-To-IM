@@ -79,7 +79,6 @@ void loop() {
   Serial.print(anxiousSensorValue);
   Serial.print(" mapped value = ");
   Serial.println(anxiousMappedValue);
-  //delay(5000);                                                    //Commented out to save time, use when reading Serial Monitor
 
   // Read the pensiveSensor force sensor
   int pensiveSensorValue = analogRead(pensiveSensor);                //Displayed between 966 (touch) and 839 (no touch)
@@ -90,8 +89,7 @@ void loop() {
   Serial.print(pensiveSensorValue);
   Serial.print(" mapped value = ");
   Serial.println(pensiveMappedValue);
-  //delay(5000);                                                    //Commented out to save time, use when reading Serial Monitor
-
+  
   // Read the boredSensor force sensor
   int boredSensorValue = analogRead(boredSensor);                   //Displayed between 865 (touch) and 0 (no touch)
   //Map the value:
@@ -101,7 +99,6 @@ void loop() {
   Serial.print(boredSensorValue);
   Serial.print(" mapped value = ");
   Serial.println(boredMappedValue);
-  //delay(5000);                                                    //Commented out to save time, use when reading Serial Monitor
 
   // Read the confusedSensor force sensor
   int confusedSensorValue = analogRead(confusedSensor);              //Displayed between 945 (touch) and 0 (no touch)
@@ -112,7 +109,6 @@ void loop() {
   Serial.print(confusedSensorValue);
   Serial.print(" mapped value = ");
   Serial.println(confusedMappedValue);
-  //delay(5000);                                                    //Commented out to save time, use when reading Serial Monitor
 
   // Read the lonelySensor force sensor
   int lonelySensorValue = analogRead(lonelySensor);                   //Displayed between 932 (touch) and 0 (no touch)
@@ -123,7 +119,6 @@ void loop() {
   Serial.print(lonelySensorValue);
   Serial.print(" mapped value = ");
   Serial.println(lonelyMappedValue);
-  //delay(5000);                                                    //Commented out to save time, use when reading Serial Monitor
 
   // Read the overwhelmedSensor force sensor
   int overwhelmedSensorValue = analogRead(overwhelmedSensor);          //Displayed between 902 (touch) and 0 (no touch)
