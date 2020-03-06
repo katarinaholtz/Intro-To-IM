@@ -23,7 +23,7 @@ The *Reassuring Message Chatter Box* is a spin on the traditional fortune teller
 
 *The circuit was broken with the force sensors not getting power from 5V, only connected to GND and the Arduino pin, so it was not working.*
 
-**[Here] is a video that shows my project at the end, almost fully working!**
+**[Here] (https://youtu.be/UsHE58BzGGM) is a video that shows my project at the end, almost fully working!**
 
 *The 'bored' sensor is broken, so that one doesn't work..*
 
