@@ -29,7 +29,7 @@
 const int rs = 13, en = 12, d4 = 11, d5 = 10, d6 = 9, d7 = 8;
 LiquidCrystal lcd(rs, en, d4, d5, d6, d7);
 
-//Set variables for force sensors
+//Set variables for force sensors pins and speaker
 const int anxiousSensor = A5;
 const int pensiveSensor = A4;
 const int boredSensor = A3;
@@ -39,7 +39,7 @@ const int overwhelmedSensor = A0;
 
 const int speaker = 6;
 
-// Notes in the melody that will play when reassuring message is displayed:
+// Notes in the melody that will play when reassuring message is displayed
 int melody[] = {
   NOTE_E4, NOTE_G4, NOTE_C5
 };
