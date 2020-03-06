@@ -34,12 +34,12 @@ Once the project was done, it worked well and I'm so glad! I had mapped the valu
 
 *The circuit was broken with the force sensors not getting power from 5V, only connected to GND and the Arduino pin, so it was not working, hence the music and message appearing beforehand.*
 
-**[Here](https://youtu.be/UsHE58BzGGM) is a video that shows my project at the end, almost fully working!**
+**[Here](https://youtu.be/UsHE58BzGGM) is a video that shows my project at the end, fully working!**
 
 *Yay!*
 
 
-**Problems I ran into and possible further developments**
+## Problems I ran into and possible further developments
 
 Other than simple design issues like changing the ranking of mood from 1-10 to 1-8, or changing the paper size, here are some of the issues I ran into and how I fixed them:
 
@@ -49,4 +49,6 @@ Other than simple design issues like changing the ranking of mood from 1-10 to 1
 
 3) Properly mapping. When I had fixed the circuit issue, I then had to go through a re-map everything. Because I had associated lower raw values with touching the sensor, I kept incorrectly mapping it (for the sensors, the low raw values often meant no touch!) so properly commenting which should go first, (touch, no touch) rather thann remembering, helped a lot.
 
-4) Finally, I would love to create a better build or set-up for the project. Though the cardboard made it easy for me to keep playing with my circuit, I would love to build something a little more durable and pretty.
+4) At one point, one of the sensors was only reading at a raw value of 3, regardless of what was pressed. I thought the sensor may have just been broken, because it was one of the ones I had been playing with the most while testing and it very likely could have snapped or broken somewhere. But after resetting the code it worked properly! One of life's mysteries, maybe there was an error in the code?
+
+5) Finally, I would love to create a better build or set-up for the project. Though the cardboard made it easy for me to keep playing with my circuit, I would love to build something a little more durable and pretty.
