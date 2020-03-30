@@ -34,7 +34,7 @@ void setup() {
         colorB -= (offset*4);
       }
 
-      //resets all variables in order to transform
+      //resets all variables in order to translate
       x = 0;
       y = 0;
       a = (size/5);
@@ -72,7 +72,7 @@ void mouseClicked() {
         colorB -= (offset*4);
       }
 
-      //resets all variables in order to transform
+      //resets all variables in order to translate
       x = 0;
       y = 0;
       a = (size/5);
