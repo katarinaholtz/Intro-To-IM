@@ -1,7 +1,7 @@
 # Computer Art: Nested Squares
 
 *Inspiration drawn from Random Squares by William Kolomyjec, in Computer Graphics and Art (1977)*
-![](RandomSquares.jpg)
+![](RandomSquares.jpg.png)
 
 
 ## End Result
