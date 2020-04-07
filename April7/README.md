@@ -21,7 +21,7 @@ The thought-process of figuring out how the cursos radius would look in code, an
 
 I would love to add a function that recognizes when all the balls are in square and actually ends the game.
 
-**White outline of balls*
+**White outline of balls**
 
 For some reason there was a white outline on the balls when they were in the purple box, despite a noStroke(); I ended up just making stroke(purple) and that got rid of the problem, but it would be nice to know what the issue there is. 
 
