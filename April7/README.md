@@ -1,9 +1,11 @@
 # Ball Roundup Game
-<img src="ballroundup.jpg" width="324" height="324">
+<img src="ballroundup.jpg" width="400" height="400">
 
 Inspired by the 'Puffle Roundup' game on *Club Penguin* the goal of this game is to push all the balls into the square. The mouse acts to 'push' the balls in the opposite direction and once a ball goes into the square there is a little 'yay' and the ball 'disappears' (changes color).
-<img src="puffleroundup.jpg" width="150">
-<img src="ballroundupyay.jpg" width="150">
+You can watch a video of the game [here](https://youtu.be/jNPc2PBGi4E).
+
+<img src="puffleroundup.jpg" width="300">
+<img src="ballroundupyay.jpg" width="300">
 
 ## Process of creating the game
 
