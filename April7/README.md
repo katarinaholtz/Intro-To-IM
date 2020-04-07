@@ -25,6 +25,10 @@ I would love to add a function that recognizes when all the balls are in square 
 
 For some reason there was a white outline on the balls when they were in the purple box, despite a noStroke(); I ended up just making stroke(purple) and that got rid of the problem, but it would be nice to know what the issue there is. 
 
+**Not placing balls in square**
+
+Because of the limitations of the random() when creating the array and populating with objects in setup, I couldn't figure out how to get the balls to NOT appear in the box when the game starts. 
+
 
 
 
