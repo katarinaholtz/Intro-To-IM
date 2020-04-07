@@ -1,5 +1,5 @@
 # Ball Roundup Game
-<img alight="CENTER" img src="ballroundup.jpg" img alt="Screenshot of ball roundup game" width="400" height="400">
+<img src="ballroundup.jpg" width="400" height="400">
 
 Inspired by the ['Puffle Roundup' game](https://www.youtube.com/watch?v=1CJY_f6Bb98) on *Club Penguin* the goal of this game is to push all the balls into the square. The mouse acts to 'push' the balls in the opposite direction and once a ball goes into the square there is a little 'yay' and the ball 'disappears' (changes color).
 You can watch a video of the game [here](https://youtu.be/jNPc2PBGi4E).
