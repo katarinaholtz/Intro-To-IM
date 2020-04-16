@@ -29,7 +29,7 @@ I wanted to change the font but kept getting an error. Some were about PFont and
 
 ### Data:
 
-data_elonmusk.csv found at: []https://www.kaggle.com/kulgen/elon-musks-tweets/data
+data_elonmusk.csv found at: https://www.kaggle.com/kulgen/elon-musks-tweets/data
 
 ### Images:
 
