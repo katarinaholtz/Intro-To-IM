@@ -12,7 +12,7 @@ Here is a [video](https://youtu.be/leqRpkybDnI) of the piece in action.
 **Breaking up the tweet**
 <img src="linebreak.jpg" width="800">
 
-I wanted to break up the tweet into two lines if over a certain number of characters, which I did by creating two separate strings in an if statement using .substring. The tweets are broken up into a new line using a hyphen "-" and the "\n". The issue is that I don't know how to recognize the placement based on words, so that it doesn't splice a word in half.
+I wanted to break up the tweet into two lines if over a certain number of characters, which I did by creating two separate strings in an if statement using .substring. The tweets are broken up into a new line using a hyphen "-" and the "\n". The issue is that I don't know how to recognize the placement based on words, so that it doesn't splice a word in half. There are also tweets that have a paragraph break in the tweet itself, so the program breaks it into three different lines.
 
 
 **Counter for images**
