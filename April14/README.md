@@ -14,11 +14,14 @@ Here is a [video](https://youtu.be/leqRpkybDnI) of the piece in action.
 
 I wanted to break up the tweet into two lines if over a certain number of characters, which I did by creating two separate strings in an if statement using .substring. The tweets are broken up into a new line using a hyphen "-" and the "\n". The issue is that I don't know how to recognize the placement based on words, so that it doesn't splice a word in half.
 
+
 **Counter for images**
 
 When we made the image position random, it moved around because it was in draw. We enjoyed it a lot but wanted to slow it down, so my friend showed me how to create a counter variable that, every time it is divisible by 10, the position changes.
 
+
 **Font**
+
 I wanted to change the font but kept getting an error. Some were about PFont and others were about 'badly formed character constant'. Not quite sure what is wrong, since I'm using the textFont, except not having the font loaded perhaps?
 
 
