@@ -2,7 +2,7 @@
 
 For this week's assignment I decided to make an Elon Musk Tweet generator. Each time the user clicks the mouse, a new tweet is pulled up, and a new funny image of Elon Musk from the list of images. The image was originally static, but in playing around with the code the image started to get redrawn frequently and we found it so funny that we decided to embrace it and just slow it down a little with a counter.
 
-<img src="tweetgenerator.jpg" width="400" height="400">
+<img src="tweetgenerator.jpg" width="800" height="400">
 
 Here is a [video](https://youtu.be/leqRpkybDnI) of the piece in action.
 
