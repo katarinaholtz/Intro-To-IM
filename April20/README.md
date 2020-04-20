@@ -5,7 +5,7 @@ For this week, we messed around with the in-class example and seeing what we can
 
 ## Different radius
 
-I played around with the radius first, too see what that would look like. The pink lines are with a random(0,300), the magenta is (0,50), the white is (50,100), and the oragne is (10,80), the one I eventually settled on. For all of these, the number of Rotators was set to [200]. 
+I played around with the radius first, too see what that would look like at different length options. For all of these, the number of Rotators was set to [200].  The pink lines are with a random(0,300), the magenta is (0,50), the white is (50,100), and the oragne is (10,80), the one I eventually settled on. This happens, I believe, because the radius is longer and so there are more connections made.
 
 <img src="radius0300.jpg" width="400">   <img src="radius050.jpg" width="400">
 <img src="radius50100.jpg" width="400">   <img src="radius1080.jpg" width="400">
