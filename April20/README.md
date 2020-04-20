@@ -1,15 +1,14 @@
 # Messing with Example
 
-For this week, we messed around with the in-class example and seeing what we can do to change it. I struggled to expand beyond it much. Though I eventually understood 
+For this week, we messed around with the in-class example and seeing what we can do to change it. I struggled to expand beyond it much. Though I eventually understood the code as was, I could not figure out how to import the gemomerative library to try it with a word.
 
 
-## Different Radius Numbers
+## Different Radius
 
-I played around with the radius number first, too see what that would look like. The pink lines are with a number between 0 and 300, the magenta is 0,50, the white is 50,100, and the oragne is 10,80. 
+I played around with the radius first, too see what that would look like. The pink lines are with a random(0,300), the magenta is (0,50), the white is (50,100), and the oragne is (10,80), the one I eventually settled on. For all of these, the number of Rotators was set to [200]. 
 
 <img src="radius0300.jpg" width="400">   <img src="radius050.jpg" width="400">
 <img src="radius50100.jpg" width="400">   <img src="radius1080.jpg" width="400">
-
 
 
 ## Circles instead
