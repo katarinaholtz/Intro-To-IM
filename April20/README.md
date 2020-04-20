@@ -1,6 +1,6 @@
 # Messing with Example
 
-For this week, we messed around with the in-class example and seeing what we can do to change it. I struggled to expand beyond it much. Though I eventually understood the code as was, I could not figure out how to import the gemomerative library to try it with a word.
+For this week, we messed around with the in-class example and seeing what we can do to change it. I struggled to expand beyond it much. Though I eventually understood the code as was, I could not figure out how to import the gemomerative library to try it with a word, so I had to stay within the example itself and experiment with how different numbers and actions would change the product.
 
 
 ## Different Radius
