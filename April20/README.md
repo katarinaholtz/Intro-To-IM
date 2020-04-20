@@ -13,9 +13,11 @@ I played around with the radius first, too see what that would look like. The pi
 
 ## Circles instead
 
-Then, I drew a version using ellipse/circles instead of lines. 
+Then, I drew a version using ellipse/circles instead of lines, with no fill in them, so we could just see the outline (by changing the line() to ellipse() in the drawLine() function. It's a weird experience to see how the program reads the code intended for the lines drawn for circles. I can't/don't actually fully  understand it, but it does look cool. 
 
 <img src="ellipse.jpg" width="400">
+
+Here is a [video](https://youtu.be/KagKPBDxsd8) of this version.
 
 
 ## Speed, colors, and mouseClicked
