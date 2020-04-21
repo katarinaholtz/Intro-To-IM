@@ -1,9 +1,14 @@
+/*
+Messing with Aaron Sherwood's example
+ April 20, 2020
+ */
+
 Rotator [] rotators;
 
 void setup() {
   size(640, 360);
-  stroke(random(250), random(250), random(250));
-  rotators = new Rotator[200];
+  stroke(random(250), random(250), random(250));    //set lines to a random color
+  rotators = new Rotator[200];                      //make an array of rotators
   for (int i=0; i< rotators.length; i++) {
     float x = random(width);
     float y = random(height);
@@ -12,21 +17,23 @@ void setup() {
   }
 }
 
-void draw() {
-  background(0, 30, 50);
-  for (Rotator r : rotators) {
-    r.rotateLine();
-    r.checkMouse();
-    r.drawLine(rotators);
-    r.mousePressed();
+void draw() {           
+  background(0, 30, 50);            //set background color
+  for (Rotator r : rotators) {      //call class, call functions for all the rotators
+    r.rotateLine();                
+    r.checkMouse();                 //function that checks the cursor/mouse position
+    r.drawLine(rotators);           //function that draws the line
+    r.mousePressed();               //function that speeds up if mouse is pressed
   }
 }
 
+//Start of Rotator class:
 class Rotator {
+  // Declare properties of objects of this type
   float x, y, centerX, centerY, angle, acceleration, velocity, radius, direction, lineDistance;
   int index;
 
-  Rotator(float _x, float _y, int i, float lineLength) {
+  Rotator(float _x, float _y, int i, float lineLength) {    // Constructor
     centerX = _x;
     centerY = _y;
     angle = acceleration = velocity = 0;
@@ -41,6 +48,7 @@ class Rotator {
     }
   }
 
+//This function sets how fast and how the lines will move
   void rotateLine() {
     velocity += acceleration;
     velocity *= direction;
@@ -49,7 +57,9 @@ class Rotator {
     velocity *= .98;
   }
 
+//This function draws the lines 
   void drawLine(Rotator[] rotators) {
+    //in order to get them to rotate around the center
     x = cos(angle)*radius + centerX;
     y = sin(angle)*radius + centerY;
     for (Rotator r : rotators) {
@@ -61,15 +71,17 @@ class Rotator {
     }
   }
 
-
+//checks mouse position
   void checkMouse() {
     if (dist(mouseX, mouseY, x, y) < radius
       && mouseX != pmouseX
       && mouseY != pmouseY) {
-      acceleration += .002;
+      acceleration += .002;    //sets speed
     }
   }
 
+//function that checks mouse position and makes it move at .1 speed
+// and change color if mouse pressed
   void mousePressed() {
     if ((mousePressed == true) 
       && (dist(mouseX, mouseY, x, y) < radius/2
