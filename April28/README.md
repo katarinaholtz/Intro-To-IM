@@ -9,7 +9,7 @@ My playing with drawing was relatively simple, inspired by Dan Shiffman spotligh
 
 ## Problems and More
 
-Above all, I know that this is a very repetitive project that probably could be simplified and use more loops or arrays or things. I'm just not sure what that would look like.
+Above all, I know that this is a very repetitive project that probably could be simplified and use more loops or arrays or things. I'm just not sure what that would look like, but I'd have liked to create something for the text in the rectangle with the names that would automatically add 20 to space out the names in the list.
 
 ### Canvas vs image size
 
@@ -17,12 +17,33 @@ I had to add the rectangle to the side manually on Photoshop, so that the entire
 
 <img src="spotlightbroken.jpg" width="800">
 
+I tried to fix it by specifically calling to the img.pixels but that also did not seem to work. Here are two of my potential solutions in trying the image with a size of 600x400 on a 800x400 canvas, with the failed results.
+
+<img src="CodeFix1.png" width="800">  <img src="CodeFix1Result.png" width="800">
+
+<img src="CodeFix2.png" width="800">  <img src="CodeFix2Result.png" width="800">
 
 ### Locating the face
 
 Ideally, if I were to return to this project, I would create a way to locate the face more automatically. Right now, I had to print out the x and y locations of each  image, then code that as a universal variable. With just four images, that was fine, but I can only imagine how much work that would be if I wanted more images. Maybe there would be a way to notice it based on pixel colors?
 
 ### Placing the faces
+
 I placed the faces using Photoshop, since it was easier. I would want to experiment with placing the faces through Processing, which would allow me to move them around more (and then also locate the face more easily, solving the previous problem). The problem was the if I called the faces, I could not also draw the pixels and spotlight without overlapping and losing the faces. I just realized while typing this that it may only be an order thing, though...so that will be something I check.
+
+
+## References
+
+ Inspired by: www.youtube.com/watch?v=j-ZLDEnhT3Q
+ 
+ **Photos** 
+ 
+ Mariet Westermann: https://library.harvard.edu/events/promise-and-perils-public-humanities-pivot
+ 
+ Daniel Shiffman: https://www.youtube.com/watch?v=10cuj0ZLBpM
+ 
+ Michael Shiloh: https://nyuad.nyu.edu/en/academics/divisions/arts-and-humanities/faculty/michael-shiloh.html
+ 
+ John Sexton: https://its.law.nyu.edu/facultyprofiles/index.cfm?fuseaction=profile.overview&personid=20281
 
 
