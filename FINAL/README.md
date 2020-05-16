@@ -42,7 +42,7 @@ The Instructions starting screen was a little trickier, since anything I did at 
 
 ### Game Over Jingles
 
-Since I had never really used music in my projects before, I wanted to make sure that I used it in this. I downloaded game jingles from [this forum](https://opengameart.org/content/69-game-over-jingles-pack) and used them to play during the end screens. But the sound was very disjointed and would start off normal but become really strange. Brian helped me figure this one. Because the sound was being called to play in the draw function, it kept repeating it and that is what made it distorted. To fix this, I created a function called playGame that held this music and everything else instead. 
+Since I had never really used music in my projects before, I wanted to make sure that I used it in this. I downloaded game jingles from [this forum](https://opengameart.org/content/69-game-over-jingles-pack) and used them to play during the end screens. But the sound was very disjointed and would start off normal but become really strange. Brian helped me figure this one. Because the sound was being called to play in the draw function, it kept repeating it and that is what made it distorted. To fix this, I only played the music if the song was already NOT playing (!winSong.isPlaying()). 
 
 
 ### Issues With Game
