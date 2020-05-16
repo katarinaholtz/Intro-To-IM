@@ -2,6 +2,8 @@
 
 The final project allowed us to do anything using the skills we learned in Processing, so I wanted to experiment with something that brought together several of the lessons I had learned.
 
+Here is a [VIDEO](https://youtu.be/2rQSbHdwD8g) of the game in action.
+
 ## Game Explanation
 
 <img src="game.png" alt="game" width="400">
@@ -14,7 +16,7 @@ The first hurdle in creating the game was creating a ball class that:
 
 **1) Created two different colors of balls**
 
-I had struggled in the past with creating different colored objects within a class, so for this I knew I wanted two colors of balls. I ended up making type a part of the constructor, so it was either 1 or 2 (note: also struggled with generating random numbers rather than a range, which was solved using round(random(1,2)). 
+I had struggled in the past with creating different colored objects within a class, so for this I knew I wanted two colors of balls. I ended up making type a part of the constructor, so it was either 1 or 2 (note: also struggled with generating random numbers rather than a range, which was solved using round(random(1,2))). 
 
 **2) Had the balls bounce off each other**
 
