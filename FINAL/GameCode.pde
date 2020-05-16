@@ -177,7 +177,7 @@ void checkCured(Ball[] balls) {
   text("GAME OVER:", width/2, (height/2)-45);
   text("YOU DEFEATED COVID", width/2, height/2); 
   textFont(bayan, 16);
-  text("Click to restart", width/2, (height/2) + 20);
+  text("Click to restart", width/2, (height/2) + 25);
   if (mousePressed) {             //If player presses mouse, song stops and game restartss
     winSong.stop();
     setup();
