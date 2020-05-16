@@ -45,3 +45,31 @@ The Instructions starting screen was a little trickier, since anything I did at 
 Since I had never really used music in my projects before, I wanted to make sure that I used it in this. I downloaded game jingles from [this forum](https://opengameart.org/content/69-game-over-jingles-pack) and used them to play during the end screens. But the sound was very disjointed and would start off normal but become really strange. Brian helped me figure this one. Because the sound was being called to play in the draw function, it kept repeating it and that is what made it distorted. To fix this, I created a function called playGame that held this music and everything else instead. 
 
 
+### Issues With Game
+
+The one noticeable problem with the game is that occasionally, two balls will hit each other in such a way that they get stuck to each other and don't seem to collide off of each other. I'm not entirely sure why this happens, unless they happen to collide in a way that causes them to keep colliding into each other and the game slightly glitches - since techincally they are reversing their own velocity and aremnot basing it on the ball they hit. 
+
+<img src="ballshit.png" size="400">
+
+The other issue that is less noticeable and actually hasn't occured to me yet, is all the balls randomly getting assigned to red or white, causing the game to immediately go over. I know I could test for all types the same way I am testing for the end screen, so that it just only draws it if not all balls are one type, but I've run into issue of how that affects the end screen being called. 
+
+## Further Ideas
+
+1) Create different 'difficulties' by having the title screen have two options (for example either key pressed or  mouse pressed) that go into different game play modees. The more difficult levels could have a purple ball that is stationary, for example, but that your mouse CANNOT go over because it is allergic to Purell.
+
+2) Some kind of timer or way to track how close or far you are to healing all the balls (like a percentage bar).
+
+3) More or different colors in the backround. I wanted to use an image but things seemed distracting so I kept the black background for now.
+
+## References
+
+Ball class code: www.openprocessing.org/sketch/434739/
+
+Collision code: github.com/aaronsherwood/introduction_interactive_media/blob/master/processingExamples/drawing/connectedLines/connectedLines.pde
+
+Music for jingles: opengameart.org/content/69-game-over-jingles-pack
+Used "49. What the World's Hoping For" and "56. Sad Strings" by Casey Frantum
+
+Instructions screen code: forum.processing.org/two/discussion/11615/how-to-make-an-instruction-scene-before-start-game
+
+
