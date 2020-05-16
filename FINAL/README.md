@@ -39,6 +39,7 @@ The Instructions starting screen was a little trickier, since anything I did at 
 
 <img src="instructions.png" width="400"> <img src="balls.png" width="400">
 
+Then, when I lost this part of my code last night before turning it in, I had to redo it and kept getting stuck because I was making it its own function, rather than inputting it within an if-statement in the draw function itself. I know I had somehow created a separate tab and section for it before, but I got it to work this way too.
 
 ### Game Over Jingles
 
@@ -72,4 +73,5 @@ Used "49. What the World's Hoping For" and "56. Sad Strings" by Casey Frantum
 
 Instructions screen code: [forum.processing.org/two/discussion/11615/how-to-make-an-instruction-scene-before-start-game](https://forum.processing.org/two/discussion/11615/how-to-make-an-instruction-scene-before-start-game)
 
+Purell Image: https://www.uline.com/Product/ProductDetailRootItem?modelnumber=S-12808 
 
