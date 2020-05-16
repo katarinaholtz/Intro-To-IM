@@ -65,11 +65,11 @@ The other issue that is less noticeable and actually hasn't occured to me yet, i
 
 Ball class code: www.openprocessing.org/sketch/434739/
 
-Collision code: github.com/aaronsherwood/introduction_interactive_media/blob/master/processingExamples/drawing/connectedLines/connectedLines.pde
+Collision code: https://github.com/aaronsherwood/introduction_interactive_media/blob/master/processingExamples/drawing/connectedLines/connectedLines.pde
 
-Music for jingles: opengameart.org/content/69-game-over-jingles-pack
+Music for jingles: [opengameart.org/content/69-game-over-jingles-pack](opengameart.org/content/69-game-over-jingles-pack)
 Used "49. What the World's Hoping For" and "56. Sad Strings" by Casey Frantum
 
-Instructions screen code: forum.processing.org/two/discussion/11615/how-to-make-an-instruction-scene-before-start-game
+Instructions screen code: [forum.processing.org/two/discussion/11615/how-to-make-an-instruction-scene-before-start-game](forum.processing.org/two/discussion/11615/how-to-make-an-instruction-scene-before-start-game)
 
 
